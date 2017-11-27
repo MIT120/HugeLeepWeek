@@ -35,7 +35,8 @@ define('DB_COLLATE', '');
 ### Link to Server: [Link](http://i358717.hera.fhict.nl/wordpress/)
  1. P5 Protototypes: [Link](http://i358717.hera.fhict.nl/empty-example/)
 ### Default User credentials 
-default example```
+default example
+```
 username: Martin
 password: lainazalefA!@#
 ```
