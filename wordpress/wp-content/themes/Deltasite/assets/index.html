@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<title>Years Slider</title>
+<link rel="stylesheet" type="text/css" href="css/normalize.min.css" media="screen, print" />
+<link rel="stylesheet" type="text/css" href="css/n2-ss-6.css" media="screen, print" />
+<style type="text/css">.n2-ss-spinner-simple-white-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px;
+    background: #fff;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.n2-ss-spinner-simple-white {
+  outline: 1px solid RGBA(0,0,0,0);
+  width:100%;
+  height: 100%;
+}
+
+.n2-ss-spinner-simple-white:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-top: -11px;
+    margin-left: -11px;
+}
+
+.n2-ss-spinner-simple-white:not(:required):before {
+    content: '';
+    border-radius: 50%;
+    border-top: 2px solid #333;
+    border-right: 2px solid transparent;
+    animation: n2SimpleWhite .6s linear infinite;
+    -webkit-animation: n2SimpleWhite .6s linear infinite;
+}
+@keyframes n2SimpleWhite {
+    to {transform: rotate(360deg);}
+}
+
+@-webkit-keyframes n2SimpleWhite {
+    to {-webkit-transform: rotate(360deg);}
+}</style>
+<script type="text/javascript">window.N2PRO=0;window.N2GSAP=0;window.N2PLATFORM="wordpress";window.nextend={localization: {}, deferreds:[], loadScript: function(url){n2jQuery.ready(function () {var d = n2.Deferred();nextend.deferreds.push(d); n2.ajax({url:url,dataType:"script",cache:true,complete:function(){setTimeout(function(){d.resolve()})}})})}, ready: function(cb){n2.when.apply(n2, nextend.deferreds).done(function(){cb.call(window,n2)})}};window.N2SSPRO=0;window.N2SS3C="smartslider3";
+        nextend.fontsLoaded = false;
+        nextend.fontsLoadedActive = function () {nextend.fontsLoaded = true;};
+        var fontData = {
+            google: {
+                families: ["Roboto:300,400:latin"]
+            },
+            active: function(){nextend.fontsLoadedActive()},
+            inactive: function(){nextend.fontsLoadedActive()}
+        };
+        if(typeof WebFontConfig !== 'undefined'){
+            var _WebFontConfig = WebFontConfig;
+            for(var k in WebFontConfig){
+                if(k == 'active'){
+                  fontData.active = function(){nextend.fontsLoadedActive();_WebFontConfig.active();}
+                }else if(k == 'inactive'){
+                  fontData.inactive = function(){nextend.fontsLoadedActive();_WebFontConfig.inactive();}
+                }else if(k == 'google'){
+                    if(typeof WebFontConfig.google.families !== 'undefined'){
+                        for(var i = 0; i < WebFontConfig.google.families.length; i++){
+                            fontData.google.families.push(WebFontConfig.google.families[i]);
+                        }
+                    }
+                }else{
+                    fontData[k] = WebFontConfig[k];
+                }
+            }
+        }
+        if(typeof WebFont === 'undefined'){
+            window.WebFontConfig = fontData;
+        }else{
+            WebFont.load(fontData);
+        }</script>
+<script type="text/javascript" src="js/n2.js"></script>
+<script type="text/javascript" src="js/nextend-frontend.min.js"></script>
+<script type="text/javascript" src="js/smartslider-frontend.min.js"></script>
+<script type="text/javascript" src="js/smartslider-simple-type-frontend.min.js"></script>
+<script type="text/javascript" src="js/nextend-webfontloader.min.js"></script>
+<script type="text/javascript" src="js/n2-ss-6.js"></script>
+<script type="text/javascript">window.n2jQuery.ready((function($){
+	window.nextend.ready(function() {
+
+        nextend.fontsDeferred = n2.Deferred();
+        if(nextend.fontsLoaded){
+            nextend.fontsDeferred.resolve();
+        }else{
+            nextend.fontsLoadedActive = function () {
+                nextend.fontsLoaded = true;
+                nextend.fontsDeferred.resolve();
+            };
+            var intercalCounter = 0;
+            nextend.fontInterval = setInterval(function(){
+                if(intercalCounter > 3 || document.documentElement.className.indexOf('wf-active') !== -1){
+                    nextend.fontsLoadedActive();
+                    clearInterval(nextend.fontInterval);
+                }
+                intercalCounter++;
+            }, 1000);
+        }
+new N2Classes.SmartSliderSimple('#n2-ss-6', {"admin":false,"translate3d":1,"callbacks":"","align":"normal","isDelayed":0,"load":{"fade":1,"scroll":0},"playWhenVisible":1,"playWhenVisibleAt":0.5,"responsive":{"desktop":1,"tablet":1,"mobile":1,"onResizeEnabled":true,"type":"auto","downscale":1,"upscale":1,"minimumHeight":0,"maximumHeight":200,"maximumSlideWidth":100,"maximumSlideWidthLandscape":100,"maximumSlideWidthTablet":100,"maximumSlideWidthTabletLandscape":100,"maximumSlideWidthMobile":100,"maximumSlideWidthMobileLandscape":100,"maximumSlideWidthConstrainHeight":0,"forceFull":0,"forceFullOverflowX":"body","forceFullHorizontalSelector":"","constrainRatio":1,"verticalOffsetSelectors":"","focusUser":0,"focusAutoplay":0,"deviceModes":{"desktopPortrait":1,"desktopLandscape":0,"tabletPortrait":1,"tabletLandscape":0,"mobilePortrait":1,"mobileLandscape":0},"normalizedDeviceModes":{"unknownUnknown":["unknown","Unknown"],"desktopPortrait":["desktop","Portrait"],"desktopLandscape":["desktop","Portrait"],"tabletPortrait":["tablet","Portrait"],"tabletLandscape":["tablet","Portrait"],"mobilePortrait":["mobile","Portrait"],"mobileLandscape":["mobile","Portrait"]},"verticalRatioModifiers":{"unknownUnknown":1,"desktopPortrait":1,"desktopLandscape":1,"tabletPortrait":1,"tabletLandscape":1,"mobilePortrait":1,"mobileLandscape":1},"minimumFontSizes":{"desktopPortrait":4,"desktopLandscape":4,"tabletPortrait":4,"tabletLandscape":4,"mobilePortrait":4,"mobileLandscape":4},"ratioToDevice":{"Portrait":{"tablet":0.7,"mobile":0.5},"Landscape":{"tablet":0,"mobile":0}},"sliderWidthToDevice":{"desktopPortrait":100,"desktopLandscape":100,"tabletPortrait":70,"tabletLandscape":0,"mobilePortrait":50,"mobileLandscape":0},"basedOn":"combined","tabletPortraitScreenWidth":800,"mobilePortraitScreenWidth":440,"tabletLandscapeScreenWidth":800,"mobileLandscapeScreenWidth":440,"orientationMode":"width_and_height","scrollFix":0,"overflowHiddenPage":0,"desktopPortraitScreenWidth":1200},"controls":{"scroll":1,"drag":1,"touch":"vertical","keyboard":1,"tilt":0},"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":0,"start":1,"duration":8000,"autoplayToSlide":-1,"autoplayToSlideIndex":-1,"allowReStart":0,"pause":{"click":1,"mouse":"0","mediaStarted":1},"resume":{"click":0,"mouse":0,"mediaEnded":1,"slidechanged":0}},"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"parallax":{"enabled":1,"mobile":0,"is3D":0,"animate":1,"horizontal":"mouse","vertical":"mouse","origin":"slider","scrollmove":"both"},"background.parallax.tablet":0,"background.parallax.mobile":0,"initCallbacks":[],"allowBGImageAttachmentFixed":false,"bgAnimations":0,"mainanimation":{"type":"vertical","duration":400,"delay":0,"ease":"easeOutQuad","parallax":1,"shiftedBackgroundAnimation":0},"carousel":1,"dynamicHeight":0});
+new N2Classes.SmartSliderWidgetArrowImage("n2-ss-6", 1, 0.7, 0.5);
+	});
+}));
+</script>
+</head>
+<body>
+
+<!-- Nextend Smart Slider 3 #6 - BEGIN -->
+<div class="n2-ss-margin" style="margin: -200px 0px 0px 0px;"><div id="n2-ss-6-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-6" class="n2-ss-slider n2-ow n2-has-hover n2notransition n2-ss-load-fade " data-minFontSizedesktopPortrait="4" data-minFontSizedesktopLandscape="4" data-minFontSizetabletPortrait="4" data-minFontSizetabletLandscape="4" data-minFontSizemobilePortrait="4" data-minFontSizemobileLandscape="4" style="font-size: 16px;" data-fontsize="16">
+        <div class="n2-ss-slider-1 n2-ss-swipe-element n2-ow" style="">
+                        <div class="n2-ss-slider-2 n2-ow">
+                                <div class="n2-ss-slider-3 n2-ow" style="">
+
+                    <div class="n2-ss-slide-backgrounds"></div><div data-first="1" data-slide-duration="0" data-id="32" class="n2-ss-slide n2-ss-canvas n2-ow  n2-ss-slide-32" style=""><div class="n2-ss-slide-background n2-ow"><div class="n2-ss-slide-background-mask"></div></div><div class="n2-ss-layers-container n2-ow" data-csstextalign="center" style=""><div class="n2-ss-section-outer" style=""><div class="n2-ss-layer n2-ow" style="overflow:visible;" data-csstextalign="inherit" data-desktopportraitmaxwidth="0" data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-pm="content" data-desktopportraitpadding="10|*|10|*|10|*|10|*|px+" data-desktopportraitinneralign="inherit" data-type="content" data-rotation="0" data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1" data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1" data-adaptivefont="1" data-desktopportraitfontsize="100" data-plugin="rendered"><div class="n2-ss-section-main-content n2-ss-layer-content n2-ow" style="padding:0.625em 0.625em 0.625em 0.625em ;" data-verticalalign="center"><div class="n2-ss-layer n2-ow" style="margin:0em 0em 0em 0em ;overflow:visible;" data-pm="normal" data-desktopportraitmargin="0|*|0|*|0|*|0|*|px+" data-desktopportraitheight="0" data-desktopportraitmaxwidth="0" data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-type="layer" data-rotation="0" data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1" data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1" data-adaptivefont="0" data-desktopportraitfontsize="100" data-plugin="rendered"><div id="n2-ss-6item1" class="n2-font-67c0e7e95b41c14ef042d7819b0dce06-hover   n2-ow" style="display:block;">2016<br /></div></div></div></div></div></div></div><div data-slide-duration="0" data-id="33" class="n2-ss-slide n2-ss-canvas n2-ow  n2-ss-slide-33" style=""><div class="n2-ss-slide-background n2-ow"><div class="n2-ss-slide-background-mask"></div></div><div class="n2-ss-layers-container n2-ow" data-csstextalign="center" style=""><div class="n2-ss-section-outer" style=""><div class="n2-ss-layer n2-ow" style="overflow:visible;" data-csstextalign="inherit" data-desktopportraitmaxwidth="0" data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-pm="content" data-desktopportraitpadding="10|*|10|*|0|*|10|*|px+" data-desktopportraitinneralign="inherit" data-type="content" data-rotation="0" data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1" data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1" data-adaptivefont="1" data-desktopportraitfontsize="100" data-plugin="rendered"><div class="n2-ss-section-main-content n2-ss-layer-content n2-ow" style="padding:0.625em 0.625em 0em 0.625em ;" data-verticalalign="center"><div class="n2-ss-layer n2-ow" style="margin:0em 0em 0em 0em ;overflow:visible;" data-pm="normal" data-desktopportraitmargin="0|*|0|*|0|*|0|*|px+" data-desktopportraitheight="0" data-desktopportraitmaxwidth="0" data-cssselfalign="inherit" data-desktopportraitselfalign="inherit" data-type="layer" data-rotation="0" data-desktopportrait="1" data-desktoplandscape="1" data-tabletportrait="1" data-tabletlandscape="1" data-mobileportrait="1" data-mobilelandscape="1" data-adaptivefont="1" data-desktopportraitfontsize="100" data-plugin="rendered"><div id="n2-ss-6item2" class="n2-font-31c3b6d1fa95db56e4b1a412aa6889b5-hover   n2-ow" style="display:block;">2017</div></div></div></div></div></div></div>                </div>
+            </div>
+            <div data-ssleft="width/2-previouswidth/2" data-sstop="0+15" id="n2-ss-6-arrow-previous" class="n2-ss-widget n2-ss-widget-display-desktop n2-ss-widget-display-tablet n2-ss-widget-display-mobile nextend-arrow n2-ow nextend-arrow-previous  nextend-arrow-animated-fade n2-ib" style="position: absolute;" role="button" aria-label="Previous slide" tabindex="0"><img class="n2-ow" data-no-lazy="1" data-hack="data-lazy-src" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNOC40MiAyMS41OGw3LjU4My03Ljk2MiA3LjQ4NSA3Ljg2Yy4yNjIuMzIuNjUuNTIyIDEuMDgzLjUyMi43OSAwIDEuNDMtLjY3MiAxLjQzLTEuNSAwLS40MDMtLjE1LS43NjgtLjM5Ny0xLjAzN2wuMDA0LS4wMDUtOC41Ny05aC0uMDAyYy0uMjYtLjI4Mi0uNjI0LS40NTgtMS4wMjgtLjQ1OEgxNmMtLjQwNCAwLS43Ny4xNzYtMS4wMy40NnYtLjAwMmwtOC41NyA5Yy0uMjQ3LjI3LS40LjYzOC0uNCAxLjA0MiAwIC44My42NCAxLjUgMS40MyAxLjUuMzg0IDAgLjczMy0uMTYuOTktLjQyeiIgZmlsbD0iIzAwMDAwMCIgb3BhY2l0eT0iMSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" alt="Arrow" /></div>
+<div data-ssleft="width/2-nextwidth/2" data-ssbottom="0+15" id="n2-ss-6-arrow-next" class="n2-ss-widget n2-ss-widget-display-desktop n2-ss-widget-display-tablet n2-ss-widget-display-mobile nextend-arrow n2-ow nextend-arrow-next  nextend-arrow-animated-fade n2-ib" style="position: absolute;" role="button" aria-label="Next slide" tabindex="0"><img class="n2-ow" data-no-lazy="1" data-hack="data-lazy-src" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMjMuNTggMTAuNDJsLTcuNTgzIDcuOTYyLTcuNDg1LTcuODZDOC4yNSAxMC4yMDIgNy44NjIgMTAgNy40MyAxMCA2LjY0IDEwIDYgMTAuNjcgNiAxMS41YzAgLjQwMy4xNS43NjguMzk4IDEuMDM3bC0uMDA0LjAwNCA4LjU3IDkuMDAzaC4wMDJjLjI2LjI4Mi42MjQuNDU4IDEuMDI4LjQ1OEgxNmMuNDA0IDAgLjc3LS4xNzUgMS4wMy0uNDZ2LjAwM2w4LjU3LTljLjI0Ny0uMjcuNC0uNjM3LjQtMS4wNDIgMC0uODMtLjY0LTEuNS0xLjQzLTEuNS0uMzg0IDAtLjczMy4xNi0uOTkuNDJ6IiBmaWxsPSIjMDAwMDAwIiBvcGFjaXR5PSIxIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiLz48L3N2Zz4=" alt="Arrow" /></div>
+        </div>
+        </div><div class="n2-clear"></div><div id="n2-ss-6-spinner" style="display: none;"><div><div class="n2-ss-spinner-simple-white-container"><div class="n2-ss-spinner-simple-white"></div></div></div></div></div></div></div><div id="n2-ss-6-placeholder" style="position: relative;z-index:2;color:RGBA(0,0,0,0);"><img style="width: 100%; max-width:100px; display: block;" class="n2-ow" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMCIgd2lkdGg9IjEwMCIgaGVpZ2h0PSIyMDAiID48L3N2Zz4=" alt="Slider" /></div>
+<!-- Nextend Smart Slider 3 #6 - END -->
+</body>
+</html>
