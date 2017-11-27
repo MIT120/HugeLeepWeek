@@ -36,11 +36,12 @@ define('DB_COLLATE', '');
 
 default example
 ```
+Link to Server: http://i358717.hera.fhict.nl/wordpress/
 username: Martin
 password: lainazalefA!@#
 ```
 
-###Optional if you want to change your credentials 
+### Optional if you want to change your credentials 
 1. Login to the wordpress admin located in ```localhost/wordpress/wp-admin```
 2. Go to profile edit and change your credentials.
 
