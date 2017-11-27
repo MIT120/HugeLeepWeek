@@ -37,8 +37,8 @@ define('DB_COLLATE', '');
 ### Default User credentials 
 default example
 ```
-username: Martin
-password: lainazalefA!@#
+username: HugeTeam
+password: kushkinatiganA!@#
 ```
 
 ### Optional if you want to change your credentials 
@@ -71,8 +71,8 @@ define('DB_COLLATE', '');
 
 Default User credentials
 ```
-username: Martin
-password: lainazalefA!@#
+username: HugeTeam
+password: kushkinatiganA!@#
 ```
 
 
